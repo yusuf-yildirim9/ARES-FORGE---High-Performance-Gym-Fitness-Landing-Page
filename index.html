@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ARES FORGE</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <a href="#home" class="skip-link">Skip to content</a>
+
+        <header class="header">
+            <div class="container header-inner">
+                <a href="#home" class="logo">
+                    <span class="logo-name">ARES FORGE</span>
+                </a>
+
+                <button type="button" class="nav-toggle-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="navbar" id="primary-nav" aria-label="Primary">
+                    <ul class="nav-list">
+                        <li class="list-item"><a href="#home" class="link">Home</a></li>
+                        <li class="list-item"><a href="#about" class="link">About Us</a></li>
+                        <li class="list-item"><a href="#pricing" class="link">Pricing</a></li>
+                        <li class="list-item"><a href="#pricing" class="link join-btn">Join now</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="home" class="home-section">
+                <div class="container home-grid">
+                    <div class="content">
+                        <p class="eyebrow">Performance gym</p>
+                        <h1 class="title">Forge Your Ultimate Self</h1>
+                        <p class="desc">Break through your limits. Access expert coaching, world-class equipment, and a community built to push you further.</p>
+                        <div class="btns">
+                            <a href="#pricing" class="start-btn">Get Started</a>
+                            <a href="#about" class="view-btn">View Programs</a>
+                        </div>
+                    </div>
+
+                    <div class="img-wrapper">
+                        <img src="images/training.jpg" alt="Athlete performing a barbell lift in the gym" class="training-img">
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="about-section">
+                <div class="container about-grid">
+                    <div class="about-img">
+                        <img src="images/coach.jpg" alt="Coach guiding a member through a training session" class="coach-img">
+                    </div>
+
+                    <div class="about-content">
+                        <p class="eyebrow">Who we are</p>
+                        <h2 class="about-title">Built for lasting results</h2>
+                        <p class="about-desc">We help people become stronger, healthier, and more confident. Through personalized training and expert guidance, we turn fitness goals into lasting results. Your journey to a better you starts here.</p>
+                        <a href="#pricing" class="more-btn">View memberships</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pricing" class="pricing-section">
+                <div class="container">
+                    <header class="section-head">
+                        <p class="eyebrow">Membership</p>
+                        <h2 class="section-title">Choose your plan</h2>
+                    </header>
+
+                    <div class="pricing-grid">
+                        <article class="pricing">
+                            <h3 class="pricing-title">1 Month</h3>
+                            <span class="price">$49</span>
+                            <span class="price-desc">Billed monthly</span>
+                            <ul class="month-details">
+                                <li class="detail-item">Personalized workout plan</li>
+                                <li class="detail-item">Basic fitness guidance</li>
+                                <li class="detail-item">Progress tracking</li>
+                                <li class="detail-item">Trainer support</li>
+                            </ul>
+                            <a href="#pricing" class="plan-cta">Select plan</a>
+                        </article>
+
+                        <article class="pricing pricing--featured">
+                            <p class="plan-badge">Most popular</p>
+                            <h3 class="pricing-title">3 Months</h3>
+                            <span class="price">$129</span>
+                            <span class="price-desc">One-time payment · Save $18</span>
+                            <ul class="month-details">
+                                <li class="detail-item">Everything in 1 Month</li>
+                                <li class="detail-item">Advanced workout plans</li>
+                                <li class="detail-item">Weekly progress reviews</li>
+                                <li class="detail-item">Personalized nutrition guidance</li>
+                                <li class="detail-item">Priority trainer support</li>
+                            </ul>
+                            <a href="#pricing" class="plan-cta">Select plan</a>
+                        </article>
+
+                        <article class="pricing">
+                            <h3 class="pricing-title">1 Year</h3>
+                            <span class="price">$399</span>
+                            <span class="price-desc">One-time payment · Save $189</span>
+                            <ul class="month-details">
+                                <li class="detail-item">Everything in 3 Months</li>
+                                <li class="detail-item">Fully customized training</li>
+                                <li class="detail-item">Monthly progress analysis</li>
+                                <li class="detail-item">Nutrition and lifestyle coaching</li>
+                                <li class="detail-item">24/7 trainer support</li>
+                            </ul>
+                            <a href="#pricing" class="plan-cta">Select plan</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer-inner">
+                <span class="logo-name">ARES FORGE</span>
+                <p>Forge stronger. Train with intent.</p>
+            </div>
+        </footer>
+        <script>
+            const navToggle = document.querySelector(".nav-toggle-btn");
+            const closeNav = () => {
+                document.body.classList.remove("nav-open");
+                navToggle.setAttribute("aria-expanded", "false");
+            };
+
+            navToggle.addEventListener("click", () => {
+                const open = document.body.classList.toggle("nav-open");
+                navToggle.setAttribute("aria-expanded", String(open));
+            });
+
+            document.querySelectorAll(".navbar a").forEach((link) => {
+                link.addEventListener("click", closeNav);
+            });
+        </script>
+    </body>
+</html>
